@@ -39,3 +39,17 @@ body {
     transition: opacity 0.3s ease; /* Transición suave al interactuar */
 }
 
+.color-btn:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el mouse */
+}
+
+
+.color-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
