@@ -20,3 +20,22 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el contenedor */
 }
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Usamos fracciones para que sea flexible */
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 300px; /* Tamaño máximo del tablero */
+}
+
+.color-btn {
+    width: 100%;
+    padding-top: 100%; /* Mantiene la proporción cuadrada */
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 10px;
+    position: relative;
+    transition: opacity 0.3s ease; /* Transición suave al interactuar */
+}
+
