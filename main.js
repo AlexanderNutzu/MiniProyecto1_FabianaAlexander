@@ -29,3 +29,14 @@ colorButtons.forEach(button => {
     });
 });
 
+function inicioJuego() {
+    jugador=prompt("Ingresa tu nombre:");
+    sequence = [];
+    playerSequence = [];
+    level = 1;
+    isGameActive = true;
+    levelDisplay.textContent = `Level: ${level}`;
+    startBtn.disabled = true;
+    nextLevel();
+}
+
