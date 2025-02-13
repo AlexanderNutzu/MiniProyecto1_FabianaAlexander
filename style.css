@@ -43,7 +43,6 @@ body {
     opacity: 1; /* Aumenta la opacidad al pasar el mouse */
 }
 
-
 .color-btn::after {
     content: "";
     position: absolute;
@@ -87,3 +86,14 @@ body {
     transition: background-color 0.3s ease; /* Transición suave */
 }
 
+
+#start-btn:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+#level {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333; /* Color oscuro para el texto del nivel */
+}
