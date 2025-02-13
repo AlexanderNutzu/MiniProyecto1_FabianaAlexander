@@ -58,3 +58,12 @@ function playSequence() {
     }, 1000);
 }
 
+function animateButton(color) {
+    const button = document.getElementById(color);
+    button.style.opacity = "1";
+    setTimeout(() => {
+        button.style.opacity = "0.6";
+    }, 500);
+}
+
+
