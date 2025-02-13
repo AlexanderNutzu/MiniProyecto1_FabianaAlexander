@@ -40,3 +40,8 @@ function inicioJuego() {
     nextLevel();
 }
 
+function nextLevel() {
+    playerSequence = [];
+    sequence.push(colors[Math.floor(Math.random() * colors.length)]);
+    playSequence();
+}
