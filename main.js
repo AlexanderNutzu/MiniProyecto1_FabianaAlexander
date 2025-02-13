@@ -45,3 +45,16 @@ function nextLevel() {
     sequence.push(colors[Math.floor(Math.random() * colors.length)]);
     playSequence();
 }
+
+function playSequence() {
+    let i = 0;
+    const interval = setInterval(() => {
+        animateButton(sequence[i]);
+        playSound(sequence[i]);
+        i++;
+        if (i >= sequence.length) {
+            clearInterval(interval);
+        }
+    }, 1000);
+}
+
