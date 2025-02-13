@@ -19,4 +19,13 @@ startBtn.addEventListener("click", inicioJuego);
 
 colorButtons.forEach(button => {
     button.addEventListener("click", () => {
+        if (isGameActive) {
+            const color = button.id;
+            playerSequence.push(color);
+            animateButton(color);
+            playSound(color);
+            checkSequence();
+        }
+    });
+});
 
