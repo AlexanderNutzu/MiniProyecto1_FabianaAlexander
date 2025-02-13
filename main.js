@@ -17,4 +17,6 @@ loadScores();
 
 startBtn.addEventListener("click", inicioJuego);
 
+colorButtons.forEach(button => {
+    button.addEventListener("click", () => {
 
