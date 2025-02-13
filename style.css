@@ -126,3 +126,31 @@ body {
         color: #333; /* Texto oscuro para los encabezados */
     }
     
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .game-board {
+        max-width: 200px; /* Reduce el tamaño del tablero alcusarlo en telefonos */
+    }
+
+    .color-btn {
+        padding-top: 100%; /* Mantiene la proporción cuadrada */
+    }
+
+    #start-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    #level {
+        font-size: 1rem;
+    }
+
+    .scoreboard h2 {
+        font-size: 1.2rem;
+    }
+
+    #score-table th, #score-table td {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+}
