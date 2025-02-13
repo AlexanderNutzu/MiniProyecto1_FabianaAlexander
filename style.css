@@ -97,3 +97,21 @@ body {
     color: #333; /* Color oscuro para el texto del nivel */
 }
 
+/* Estilos para la tabla de puntuaciones */
+.scoreboard {
+    margin-top: 30px;
+    width: 100%;
+    overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+}
+
+
+#score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff; /* Fondo blanco para la tabla */
+    color: #333; /* Texto oscuro para la tabla */
+    border-radius: 10px;
+    overflow: hidden; /* Oculta los bordes redondeados internos */
+}
+
