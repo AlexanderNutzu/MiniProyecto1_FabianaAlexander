@@ -158,6 +158,13 @@ body {
 }   
 /* Media queries para pantallas pequeñas */
 @media (max-width: 600px) {
+    #Menu {
+        max-width: 400px;
+    }
+    
+    #Juego {
+        max-width: 400px;
+    }
     .game-board {
         max-width: 200px; /* Reduce el tamaño del tablero alcusarlo en telefonos */
     }
