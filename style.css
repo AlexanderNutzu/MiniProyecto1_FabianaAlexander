@@ -121,10 +121,14 @@ body {
     text-align: center;
 }
     
-    #score-table th {
+#score-table th {
         background-color: #f2f2f2; /* Fondo gris claro para los encabezados */
         color: #333; /* Texto oscuro para los encabezados */
-    }
+}
+
+.oculto {
+    display: none;
+}
     
 /* Media queries para pantallas pequeñas */
 @media (max-width: 600px) {

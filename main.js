@@ -15,7 +15,10 @@ const scoreTableBody = document.querySelector("#score-table tbody");
 //Cargar puntuaciones al iniciar
 loadScores();
 
-startBtn.addEventListener("click", inicioJuego);
+startBtn.addEventListener("click", function(){
+    Menu.classlist.add("oculto");
+    Juego.classlist.remove("oculto");
+    inicioJuego});
 
 colorButtons.forEach(button => {
     button.addEventListener("click", () => {
