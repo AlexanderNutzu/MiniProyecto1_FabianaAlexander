@@ -103,3 +103,16 @@ function salvaPuntaje(score) {
         localStorage.setItem("scores", JSON.stringify(scores));
     }
 }
+
+function loadScores() {
+    const scores = JSON.parse(localStorage.getItem("scores")) || [];
+    scoreTableBody.innerHTML = ""; // Limpiar la tabla antes de cargar los datos
+    scores.sort((a, b) => b.score - a.score).forEach(score => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${score.name}</td>
+            <td>${score.score}</td>
+        `;
+        scoreTableBody.appendChild(row);
+    });
+}
