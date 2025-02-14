@@ -72,3 +72,16 @@ function playSound(color) {
     sound.play();
 }
 
+function checkSequence() {
+    for (let i = 0; i < playerSequence.length; i++) {
+        if (playerSequence[i] !== sequence[i]) {
+            finJuego();
+            return;
+        }
+    }
+    if (playerSequence.length === sequence.length) {
+        level++;
+        levelDisplay.textContent = `Level: ${level}`;
+        setTimeout(nextLevel, 1000);
+    }
+}
