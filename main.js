@@ -66,4 +66,9 @@ function animateButton(color) {
     }, 500);
 }
 
+function playSound(color) {
+    const sound = document.getElementById(`${color}-sound`);
+    sound.currentTime = 0;
+    sound.play();
+}
 
