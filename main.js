@@ -7,6 +7,8 @@ let level = 1;
 let isGameActive = false;
 let jugador= null;
 
+const Menu = document.getElementById("Menu");
+const Juego = document.getElementById("Juego");
 const startBtn = document.getElementById("start-btn");
 const levelDisplay = document.getElementById("level");
 const colorButtons = document.querySelectorAll(".color-btn");
@@ -18,7 +20,8 @@ loadScores();
 startBtn.addEventListener("click", function(){
     Menu.classlist.add("oculto");
     Juego.classlist.remove("oculto");
-    inicioJuego});
+    inicioJuego();
+});
 
 colorButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -57,9 +60,9 @@ function playSequence() {
         i++;
         if (i >= sequence.length) {
             clearInterval(interval);
-        }
+        };
     }, 1000);
-}
+};
 
 function animateButton(color) {
     const button = document.getElementById(color);
@@ -67,27 +70,27 @@ function animateButton(color) {
     setTimeout(() => {
         button.style.opacity = "0.6";
     }, 500);
-}
+};
 
 function playSound(color) {
     const sound = document.getElementById(`${color}-sound`);
     sound.currentTime = 0;
     sound.play();
-}
+};
 
 function checkSequence() {
     for (let i = 0; i < playerSequence.length; i++) {
         if (playerSequence[i] !== sequence[i]) {
             finJuego();
             return;
-        }
-    }
+        };
+    };
     if (playerSequence.length === sequence.length) {
         level++;
         levelDisplay.textContent = `Level: ${level}`;
         setTimeout(nextLevel, 1000);
-    }
-}
+    };
+};
 
 function finJuego() {
     alert(`ohhh perdiste.. Suerte la proxima... ${level}`);
@@ -95,7 +98,7 @@ function finJuego() {
     startBtn.disabled = false;
     salvaPuntaje(level);
     loadScores();
-}
+};
 
 function salvaPuntaje(score) {
     //const playerName = prompt("Ingresa tu nombre:");
@@ -104,8 +107,8 @@ function salvaPuntaje(score) {
         const scores = JSON.parse(localStorage.getItem("scores")) || [];
         scores.push({ name: playerName, score: score });
         localStorage.setItem("scores", JSON.stringify(scores));
-    }
-}
+    };
+};
 
 function loadScores() {
     const scores = JSON.parse(localStorage.getItem("scores")) || [];
@@ -118,4 +121,4 @@ function loadScores() {
         `;
         scoreTableBody.appendChild(row);
     });
-}
+};

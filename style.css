@@ -11,6 +11,14 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+
+#Menu {
+    text-align: center;
+}
+
+#Juego {
+    text-align: center;
+}
 .container {
     text-align: center;
     width: 100%;
