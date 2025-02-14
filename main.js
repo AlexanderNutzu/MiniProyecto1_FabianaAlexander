@@ -93,3 +93,13 @@ function finJuego() {
     salvaPuntaje(level);
     loadScores();
 }
+
+function salvaPuntaje(score) {
+    //const playerName = prompt("Ingresa tu nombre:");
+    const playerName =jugador;
+    if (playerName) {
+        const scores = JSON.parse(localStorage.getItem("scores")) || [];
+        scores.push({ name: playerName, score: score });
+        localStorage.setItem("scores", JSON.stringify(scores));
+    }
+}
