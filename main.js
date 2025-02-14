@@ -10,9 +10,11 @@ let jugador= null;
 const Menu = document.getElementById("Menu");
 const Juego = document.getElementById("Juego");
 const startBtn = document.getElementById("start-btn");
+const regreso = document.getElementById("regreso");
 const levelDisplay = document.getElementById("level");
 const colorButtons = document.querySelectorAll(".color-btn");
 const scoreTableBody = document.querySelector("#score-table tbody");
+
 
 //Cargar puntuaciones al iniciar
 loadScores();
@@ -22,6 +24,8 @@ startBtn.addEventListener("click", function(){
     Juego.classList.remove("oculto");
     inicioJuego();
 });
+
+regreso.addEventListener("click", regresarMenu);
 
 colorButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -94,10 +98,7 @@ function checkSequence() {
 
 function finJuego() {
     alert(`ohhh perdiste.. Suerte la proxima... ${level}`);
-    isGameActive = false;
-    startBtn.disabled = false;
-    salvaPuntaje(level);
-    loadScores();
+    regresarMenu()
 };
 
 function salvaPuntaje(score) {
@@ -122,3 +123,12 @@ function loadScores() {
         scoreTableBody.appendChild(row);
     });
 };
+
+function regresarMenu(){
+    isGameActive = false;
+    startBtn.disabled = false;
+    salvaPuntaje(level);
+    loadScores();
+    Juego.classList.add("oculto");
+    Menu.classList.remove("oculto");
+}
