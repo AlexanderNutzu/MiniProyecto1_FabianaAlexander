@@ -18,8 +18,8 @@ const scoreTableBody = document.querySelector("#score-table tbody");
 loadScores();
 
 startBtn.addEventListener("click", function(){
-    Menu.classlist.add("oculto");
-    Juego.classlist.remove("oculto");
+    Menu.classList.add("oculto");
+    Juego.classList.remove("oculto");
     inicioJuego();
 });
 
