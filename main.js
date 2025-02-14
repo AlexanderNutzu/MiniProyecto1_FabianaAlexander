@@ -85,3 +85,11 @@ function checkSequence() {
         setTimeout(nextLevel, 1000);
     }
 }
+
+function finJuego() {
+    alert(`ohhh perdiste.. Suerte la proxima... ${level}`);
+    isGameActive = false;
+    startBtn.disabled = false;
+    salvaPuntaje(level);
+    loadScores();
+}
