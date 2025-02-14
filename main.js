@@ -6,6 +6,7 @@ let playerSequence = [];
 let level = 1;
 let isGameActive = false;
 let jugador= null;
+startBtn.disabled = false;
 
 const Menu = document.getElementById("Menu");
 const Juego = document.getElementById("Juego");
