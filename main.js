@@ -70,9 +70,9 @@ function playSequence() {
 
 function animateButton(color) {
     const button = document.getElementById(color);
-    button.style.opacity = "1";
+    button.classList.add("active"); //button.style.opacity = "1";
     setTimeout(() => {
-        button.style.opacity = "0.6";
+        button.classList.remove("active"); //button.style.opacity = "0.6";
     }, 500);
 };
 
