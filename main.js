@@ -97,7 +97,7 @@ function checkSequence() {
 };
 
 function finJuego() {
-    alert(`ohhh perdiste.. Suerte la proxima... ${level}`);
+    alert(`Ohhh perdiste...Suerte la próxima...Llegaste al nivel: ${level}`);
     regresarMenu()
 };
 
