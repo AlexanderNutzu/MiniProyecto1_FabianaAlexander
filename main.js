@@ -72,7 +72,7 @@ function animateButton(color) {
     const button = document.getElementById(color);
     button.style.opacity = "1"; //button.style.opacity = "1";
     setTimeout(() => {
-        button.button.style.opacity = "0.6"; //button.style.opacity = "0.6";
+        button.style.opacity = "0.6"; //button.style.opacity = "0.6";
     }, 500);
 };
 
