@@ -1,4 +1,18 @@
 /*Empezando archivos*/
+
+:root {
+    --background-color: #707b7c; 
+    --text-color: #fff; 
+    --container-bg: black; 
+    --button-bg: #4CAF50; 
+    --button-hover-bg: #45a049; 
+    --button-red-bg: #4e0e0e; 
+    --button-red-hover-bg: rgb(194, 34, 34); 
+    --table-bg: #fff; 
+    --table-header-bg: #f2f2f2; 
+    --dark-text-color: #333; 
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -6,8 +20,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #707b7c; /* Fondo gris azulado */
-    color: #fff; /* Texto blanco para contrastar con el fondo */
+    background-color: #707b7c; 
+    color: #fff; 
     padding: 20px;
     box-sizing: border-box;
 }
